@@ -79,7 +79,7 @@ def main():
         driver.find_element_by_id('id-jobTitle').send_keys(job_title[i])
         driver.find_element_by_id('id-employer').send_keys(company[i])
         driver.find_element_by_id('clickable-APPLIED').click()
-        if notes != "":
+        if notes[i] != "":
             driver.find_element_by_id('id-notes').send_keys(notes[i])
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "id-applicationDate.day")))
         driver.find_element_by_id("id-applicationDate.day").send_keys(date.today().strftime("%d"))
