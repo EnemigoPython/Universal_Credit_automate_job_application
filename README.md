@@ -1,4 +1,4 @@
 # Universal_Credit_automate_job_application
-Using Selenium, automate the process of entering the jobs you apply for.
+Using Selenium, automate the process of entering the jobs you apply for on the Universal Credit website.
 You must first install Selenium and a web driver from your chosen browser, and replace the PATH and driver variables in the code for it to work.
 Currently operational.
