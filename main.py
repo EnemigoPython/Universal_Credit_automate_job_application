@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import date, datetime
-import time
 
 
 class InvalidFileError(Exception):
@@ -52,7 +51,8 @@ def main():
         job_title.append(input('Enter job title: '))
         company.append(input('Enter company or agency: '))
         notes.append(input('Enter notes (optional): '))
-
+    
+    # insert the path/driver type of your browser here
     PATH = "C:\Program Files (x86)\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
 
