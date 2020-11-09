@@ -38,7 +38,7 @@ def main():
             login.write(password + "\n")
             login.write(security)
 
-    number_of_submits = input('Submit 1 or more job applications? ')
+    number_of_submits = input('How many submissions would you like to make? ')
     job_title = []
     company = []
     notes = []
