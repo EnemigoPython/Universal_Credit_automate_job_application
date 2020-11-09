@@ -16,6 +16,7 @@ def wait(driver):
 
 def submit(driver):
     driver.find_element_by_id('id-submit-button').click()
+    wait(driver)
 
 
 def main():
@@ -61,26 +62,18 @@ def main():
     driver.find_element_by_id('id-password').send_keys(password)
     submit(driver)
 
-    wait(driver)
-
     driver.find_element_by_id('id-answer').send_keys(security)
     submit(driver)
 
-    wait(driver)
-
     driver.find_element_by_xpath("//a[@href='/journal']").click()
     driver.find_element_by_id('id-add-a-journal-entry-link').click()
-
     wait(driver)
 
     driver.find_element_by_id('clickable-WORK_SEARCH_JOB_APPLICATIONS').click()
     submit(driver)
 
-    wait(driver)
-
     for i in range(number_of_submits):
         driver.find_element_by_id('add-job').click()
-
         wait(driver)
 
         driver.find_element_by_id('id-jobTitle').send_keys(job_title[i])
@@ -93,8 +86,6 @@ def main():
         driver.find_element_by_id("id-applicationDate.month").send_keys(date.today().strftime("%m"))
         driver.find_element_by_id("id-applicationDate.year").send_keys(datetime.now().year)
         submit(driver)
-
-        wait(driver)
     print("Finished")
     input('Any key to exit')
     driver.quit()
